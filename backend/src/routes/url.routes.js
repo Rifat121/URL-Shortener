@@ -14,7 +14,6 @@ router.post("/", auth, async (req, res) => {
       return res.status(400).json({ message: "Original URL is required" });
     }
 
-    // Free tier limit: 100 URLs per user
     const urlCount = await Url.countDocuments({ userId: req.userId });
     if (urlCount >= 100) {
       return res.status(403).json({
@@ -22,7 +21,6 @@ router.post("/", auth, async (req, res) => {
       });
     }
 
-    // Generate unique short code
     const shortCode = await generateUniqueShortCode();
 
     const url = await Url.create({
@@ -97,7 +95,6 @@ router.get("/:shortCode/redirect", async (req, res) => {
       return res.status(404).json({ message: "Short URL not found" });
     }
 
-    // Increment click count
     url.clicks += 1;
     await url.save();
 
