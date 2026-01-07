@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*  
+  Need to Adjust the color a little bit
+  Currently not blending with the text color properly 
+*/
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --primary-start: #0ea5e9;
+  --primary-end: #6366f1;
+  --accent: #16a34a;
+  --text: #0f172a;
+  --muted: #64748b;
+  --danger: #dc2626;
+  --border: rgba(15, 23, 42, 0.08);
+}
+
+body {
+  background: linear-gradient(180deg, #f8fafc, #e2e8f0);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(99, 102, 241, 0.35);
+}
+
+.table-row:hover {
+  background: rgba(14, 165, 233, 0.08);
+  transition: all 0.3s ease;
+}

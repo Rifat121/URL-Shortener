@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #020617;
+  --card: #111827;
+  --primary-start: #38bdf8;
+  --primary-end: #6366f1;
+  --accent: #22c55e;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --danger: #ef4444;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background: linear-gradient(180deg, #0f172a, #020617);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
+  color: #020617;
+  border-radius: 10px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--primary-end);
+}
+
+.table-row:hover {
+  background: rgba(56, 189, 248, 0.08);
+  transition: all 0.3s ease;
+}
