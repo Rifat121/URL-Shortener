@@ -6,7 +6,8 @@ import api from "../services/api";
 export default function Dashboard() {
   const [urls, setUrls] = useState([]);
 
-  // Fetch URLs
+  // Need to modify this method
+  // Also, Show user error/success messages
   const fetchUrls = useCallback(async () => {
     try {
       const res = await api.get("/url");
@@ -20,18 +21,15 @@ export default function Dashboard() {
     fetchUrls();
   }, [fetchUrls]);
 
-  // Logout handler
   const handleLogout = () => {
-    localStorage.removeItem("token"); // remove JWT
-    window.location.href = "/login"; // redirect to login page
+    localStorage.removeItem("token");
+    window.location.href = "/login";
   };
 
-  // Calculate total clicks
   const totalClicks = urls.reduce((sum, u) => sum + u.clicks, 0);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0f172a] to-[#020617] p-8">
-      {/* Header + Logout */}
       <div className="flex items-center mb-8">
         <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#38bdf8] to-[#6366f1]">
           Dashboard
@@ -44,7 +42,6 @@ export default function Dashboard() {
         </button>
       </div>
 
-      {/* Stats Cards */}
       <div className="flex gap-6 mb-8 flex-wrap">
         <div className="bg-[#111827] p-4 rounded-xl shadow-lg flex-1 flex flex-col items-center justify-center hover:shadow-blue-500/40 transition-shadow duration-300 min-w-[150px]">
           <span className="text-gray-400">Total URLs</span>
@@ -66,10 +63,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* URL Input Form */}
       <UrlForm onCreated={fetchUrls} />
-
-      {/* URL Table */}
       <UrlTable urls={urls} onDelete={fetchUrls} />
     </div>
   );
