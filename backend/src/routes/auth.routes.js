@@ -72,8 +72,4 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.get("/dashboard", auth, async (req, res) => {
-  // req.userId is available
-});
-
 module.exports = router;
