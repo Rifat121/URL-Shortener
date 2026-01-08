@@ -16,7 +16,7 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVkNThiOGVlN2QyYzlkNjRmYTM4N2YiLCJpYXQiOjE3Njc4ODQyNzMsImV4cCI6MTc2Nzk3MDY3M30.5-TNZYn-3RAJy6QNhSBMg7IBjiNz-7eYXhN27hoPa7s",
+            "value": "Bearer <token>",
             "type": "text",
             "uuid": "a01978cb-c110-495b-84cd-6f8f85fd278a"
           }
@@ -82,7 +82,7 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVkNThiOGVlN2QyYzlkNjRmYTM4N2YiLCJpYXQiOjE3Njc3OTY5MDcsImV4cCI6MTc2Nzg4MzMwN30.sYq3V8URiHoEzbKEVNRXLsSo7xTz55ZoN4jtwTDyY-8",
+            "value": "Bearer <token>",
             "type": "text",
             "uuid": "ea38bdb9-c26a-432d-9a06-735b20496c33"
           }
@@ -122,7 +122,7 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVkNThiOGVlN2QyYzlkNjRmYTM4N2YiLCJpYXQiOjE3Njc3OTY5MDcsImV4cCI6MTc2Nzg4MzMwN30.sYq3V8URiHoEzbKEVNRXLsSo7xTz55ZoN4jtwTDyY-8",
+            "value": "Bearer <token>",
             "type": "text",
             "uuid": "9e50ae11-94f9-40b3-a570-5a4b4885b241"
           }
