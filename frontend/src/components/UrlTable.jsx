@@ -15,6 +15,7 @@ export default function UrlTable({ urls, onDelete }) {
             <th className="p-4 text-left">Original URL</th>
             <th className="p-4">Short URL</th>
             <th className="p-4 text-center">Clicks</th>
+            <th className="p-4 text-center">Created At</th>
             <th className="p-4 text-center">Action</th>
           </tr>
         </thead>
@@ -54,6 +55,16 @@ export default function UrlTable({ urls, onDelete }) {
 
               <td className="p-4 text-center text-gray-200 font-medium">
                 {u.clicks}
+              </td>
+              <td className="p-4 text-center text-gray-200 font-medium">
+                {new Date(u.createdAt).toLocaleString('en-US', {
+                  month: 'short',
+                  day: 'numeric',
+                  year: 'numeric',
+                  hour: 'numeric',
+                  minute: '2-digit',
+                  hour12: true
+                })}
               </td>
 
               <td className="p-4 text-center">
